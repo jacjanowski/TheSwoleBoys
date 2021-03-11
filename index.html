@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Swole Boys</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="./stylesheets/main.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"
+		integrity="sha256-t8GepnyPmw9t+foMh3mKNvcorqNHamSKtKRxxpUEgFI=" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+
+<body>
+
+	<div class="ui inverted vertical masthead center aligned segment" id="fade-scroll">
+		<div class="ui grid container">
+
+			<h1 id="toggle-bar">☰</h1>
+
+			<div class="ui large inverted secondary pointing menu" id="menuBar">
+				<div class="mainMenu">
+					<a class="item active">
+						Exercises
+					</a>
+
+					<a class="item" href="#">
+						Track Goals
+					</a>
+					<a class="item" href="#">
+						Progress Report
+					</a>
+					<a class="item" href="#">
+						Tips
+					</a>
+					<a class="item" href="#">
+						Connections
+					</a>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function toggleMenu() {
+			let getMenu = document.querySelector(".mainMenu");
+			getMenu.classList.toggle("hamburger");
+		}
+		let getHamburger = document.querySelector("#toggle-bar");
+		getHamburger.addEventListener("click", toggleMenu);
+	</script>
+
+	<script type="text/javascript" src="./stylesheets/model.js"></script>
+</body>
+
+</html>

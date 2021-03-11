@@ -1,0 +1,120 @@
+
+a {
+	cursor: pointer;
+	
+}
+a.button {
+	
+	text-decoration: underline;
+}
+
+
+/* .ui.inverted {
+	display: block;
+	margin-bottom: 5px;
+	margin: auto;
+	margin-bottom: 1em;
+} */
+/*---- 'Address & Contact Information' tag -----*/
+/* .ui.center.aligned.header {
+	color: #1b1c1d;
+	font-family: 'Quicksand', sans-serif;
+	margin: auto;
+	margin-top: 5rem;
+	margin-bottom: 5rem;
+	
+} */
+#toggle-bar {
+	padding-top: 15px;
+	
+}
+/* ---------------------------------------- */
+
+
+
+#toggle-bar {
+	position: absolute;
+	cursor: pointer;
+}
+#modalItem {
+	margin-top: 2rem;
+}
+.fade {
+	opacity: 1;
+}
+
+
+section {
+	opacity: 0;
+	transform: translate(0, 50px); 
+	transition: all 2s;
+}
+
+section.visible {
+	opacity: 1;
+	transform: translate(0, 0); 
+}
+
+h3.ui.header > a {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 24px;
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+
+h3.ui.header > a:hover {
+  color: #000;
+}
+h3.ui.header > a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+h3.ui.header > a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+/* When the hamburger is displayed */
+@media (max-width: 768px){
+	.mainMenu{
+		display: none;
+	}
+	.mainMenu.hamburger{
+		margin-top: 30px;
+		display: block;
+		cursor: pointer;
+
+	}
+
+
+	#fade-scroll {
+		max-height: 500px;
+	}
+
+
+}
+
+
+/* When the hamburger is NOT there yet */
+@media (min-width: 769px){
+	.mainMenu{
+		display: flex;
+	}
+
+	#toggle-bar{
+		display: none;
+	}
+	#menuBar {
+		margin-bottom: 20px;
+	}
+	
+
+}
