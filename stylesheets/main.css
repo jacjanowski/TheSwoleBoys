@@ -1,13 +1,30 @@
 
+body {
+	background-color: rgb(200, 200, 245);
+}
 a {
 	cursor: pointer;
-	
+	font-family: 'Quicksand', sans-serif;
 }
 a.button {
 	
 	text-decoration: underline;
 }
 
+div.six.column.row{
+	justify-content: space-evenly;
+	align-items: baseline;
+
+}
+.ui.grid{
+	margin: 5%;
+}
+.ui.circular {
+	height: auto;
+	width: 170px;
+	/* border: 1px solid black; */
+	
+}
 
 /* .ui.inverted {
 	display: block;
