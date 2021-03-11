@@ -2,6 +2,9 @@
 body {
 	background-color: rgb(200, 200, 245);
 }
+h1,h3{
+	font-family: 'Quicksand', sans-serif;
+}
 a {
 	cursor: pointer;
 	font-family: 'Quicksand', sans-serif;
@@ -11,10 +14,8 @@ a.button {
 	text-decoration: underline;
 }
 
-div.six.column.row{
-	justify-content: space-evenly;
-	align-items: baseline;
-
+img {
+	margin: auto;
 }
 .ui.grid{
 	margin: 5%;
@@ -111,9 +112,9 @@ h3.ui.header > a:hover::before {
 
 	}
 
-	.ui.grid {
+	/* .ui.grid {
 		justify-content: normal;
-	}
+	} */
 
 
 	#fade-scroll {

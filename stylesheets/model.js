@@ -3,6 +3,11 @@ $(document).ready(function () {
 	$("#modalBtn").click(function(){
 		 $('#modalShow').modal('show');
 	});
+	$("#title").animate({
+		'font-size': '40px',
+		'opacity': '1',
+		'color': 'white'
+	}, 1000);
 });
 
 $(document).ready(function() {
