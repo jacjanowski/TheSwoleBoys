@@ -14,8 +14,13 @@ $(document).ready(function() {
     $('a').click(function() {
         $('.item.active').removeClass("active");
         $(this).addClass("active");
-    });
+	});
+	
+	// $('').click(function(){
+
+	// })
 });
+$('.tabular.menu .item').tab();
 
 $(window).scroll(function(){
 	$("#fade-scroll").each(function(){
