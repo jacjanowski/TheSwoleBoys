@@ -5,6 +5,9 @@ body {
 h1,h3{
 	font-family: 'Quicksand', sans-serif;
 }
+.item p {
+	margin: 0;
+}
 a {
 	cursor: pointer;
 	font-family: 'Quicksand', sans-serif;

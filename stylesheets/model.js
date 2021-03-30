@@ -16,9 +16,6 @@ $(document).ready(function() {
         $(this).addClass("active");
 	});
 	
-	// $('').click(function(){
-
-	// })
 });
 $('.tabular.menu .item').tab();
 
