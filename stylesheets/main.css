@@ -5,6 +5,10 @@ body {
 h1,h3{
 	font-family: 'Quicksand', sans-serif;
 }
+h1 {
+	text-align: center;
+	padding-top: 20px;
+}
 .item p {
 	margin: 0;
 }

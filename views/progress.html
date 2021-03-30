@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Swole Boys</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"
+        integrity="sha256-t8GepnyPmw9t+foMh3mKNvcorqNHamSKtKRxxpUEgFI=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<!-- 
+    <script type="text/javascript">
+        google.charts.load('current', { packages: ['corechart', 'line'] });
+        google.charts.setOnLoadCallback(drawCurveTypes);
+
+        function drawCurveTypes() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('number', 'X');
+            data.addColumn('number', 'Dogs');
+            data.addColumn('number', 'Cats');
+
+            data.addRows([
+                [0, 0, 0], [1, 10, 5], [2, 23, 15], [3, 17, 9], [4, 18, 10], [5, 9, 5],
+
+            ]);
+
+            var options = {
+                hAxis: {
+                    title: 'Time'
+                },
+                vAxis: {
+                    title: 'Popularity'
+                },
+                series: {
+                    1: { curveType: 'function' }
+                }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script> -->
+
+</head>
+
+
+<body>
+
+    <h1>Progress Report</h1>
+    <div class="ui center aligned equal width grid">
+
+        <div class="eight wide column">
+            <div class="ui segment">
+
+                <div class="ui tabular menu">
+                    <div class="item" data-tab="tab-name">Strength</div>
+                    <div class="item" data-tab="tab-name2">Weight</div>
+                    <div class="item" data-tab="tab-name3">Endurance</div>
+                </div>
+
+
+
+                <div class="ui tab" data-tab="tab-name">
+                    <div class="column">
+                        <div class="ui vertical fluid menu">
+                            <!-- Soccer: <input onclick="drawCurveTypes()" type="checkbox" id="soccer"
+                                value="soccer" /><br />
+                            baseball: <input onclick="drawCurveTypes2()" type="checkbox" id="baseball"
+                                value="soccer" /><br />
+                            football: <input onclick="drawCurveTypes3()" type="checkbox" id="football"
+                                value="soccer" /><br /> -->
+
+                            <!-- <div id="txtAge" style="display:none">Age is something</div>
+                                <div style="display: none;" id="tester">tester</div> -->
+
+                            <div class="ui buttons">
+
+                                <button class="ui inverted blue button" onclick="drawCurveTypes()">Bench</button>
+                                <button class="ui inverted red button" onclick="drawCurveTypes2()">Deadlift</button>
+                                <button class="ui inverted yellow button" onclick="drawCurveTypes3()">Bench</button>
+                                <button class="ui inverted green button" onclick="drawCurveTypes4()">Deadlift</button>
+                            </div>
+
+                            <div id="chart_div" style="width: 100%; height: 500px;"></div>
+
+                            <!-- <button type="button" id="hideSales">Hide Sales</button>
+                            <button type="button" id="hideExpenses">Hide Expence</button>
+                            <button type="button" id="toggleSales">Toggle Sales</button>
+                            <button type="button" id="toggleExpenses">Toggle Expence</button> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="ui tab" data-tab="tab-name2">
+                    2
+                </div>
+                <div class="ui tab" data-tab="tab-name3">
+                    3
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="../stylesheets/model.js"></script>
+</body>
+
+
+
+</html>

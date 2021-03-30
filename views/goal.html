@@ -21,15 +21,15 @@
 
 <body>
 
-
+    <h1>Track Your Goals</h1>
     <div class="ui center aligned equal width grid">
 
         <div class="eight wide column">
             <div class="ui segment">
 
                 <div class="ui tabular menu">
-                    <div class="item" data-tab="tab-name">Tab Name</div>
-                    <div class="item" data-tab="tab-name2">Tab Name 2</div>
+                    <div class="item" data-tab="tab-name">Current Goals</div>
+                    <div class="item" data-tab="tab-name2">Completed Goals</div>
                 </div>
 
 
@@ -38,7 +38,13 @@
 
                 <div class="ui tab" data-tab="tab-name">
                     <div class="column">
-                        <div class="ui vertical fluid menu">
+                        <input type='text' id='input' />
+                        <input type='button' value='add to list' id='add' />
+
+                        
+
+
+                        <div class="ui vertical fluid menu" >
                             <div style="overflow: auto;" class="item">
                                 <span>Go on a 5 mile run</span>
                                 <div class="ui right floated green animated button" tabindex="0">
@@ -65,6 +71,29 @@
                                         <i class="check icon"></i>
                                     </div>
                                 </div>
+                            </div>
+                            <div style="overflow: auto;" class="item">
+                                <span>Stretch for 20 min</span>
+                                <div class="ui right floated green animated button" tabindex="0">
+                                    <div class="visible content">Done</div>
+                                    <div class="hidden content">
+                                        <i class="check icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="overflow: auto;" class="item">
+                                <span>Stretch for 20 min</span>
+                                <div class="ui right floated green animated button" tabindex="0">
+                                    <div class="visible content">Done</div>
+                                    <div class="hidden content">
+                                        <i class="check icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id='list'>
+                                
+                            
                             </div>
                         </div>
                     </div>
