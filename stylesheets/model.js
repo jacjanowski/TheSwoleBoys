@@ -21,9 +21,48 @@
 // 	    $('#chart_div').hide();
 //     }
 // }
+$('ul').on('click', 'li', function () {
+    $(this).toggleClass("completed");
+});
+
+//click on X to delete 'todo'
+$('ul').on('click', 'span', function (event) {
+    $(this).parent().fadeOut(1000, function () {
+        $(this).remove();
+    });
+    event.stopPropagation();
+
+});
+
+$("input[type='text']").keypress(function (event) {
+    if (event.which === 13) {
+        var todoText = $(this).val();
+        $(this).val("");
+        //create a new 'li' and add to 'ul'
+        $('ul').append('<li><span><i class="fa fa-trash"></i></span>' + todoText + '</li>');
+
+    }
+});
+
+$('.fa-plus').click(function () {
+    $("input[type='text']").fadeToggle();
+});
 
 
 
+// $('.animated').click(function () {
+// 	$('.item span').wrap("<strike>");
+// 	//$('a').css("text-decoration", "line-through");
+// });
+
+function showInput() {
+	var x = document.getElementById("inputGoal");
+	if (x.style.display === "none") {
+		x.style.display = "block";
+	} else {
+		x.style.display = "none";
+	}
+}
 
 $(document).ready(function () {
 
@@ -43,21 +82,21 @@ $(document).ready(function () {
 		$(this).addClass("active");
 	});
 
-	
-document.getElementById("add").onclick = function() {
-	
-	var text = document.getElementById("input").value; 
-	if(!text) {
-		return;
+
+	document.getElementById("add").onclick = function () {
+
+		var text = document.getElementById("input").value;
+		if (!text || text[0] === " ") {
+			return;
+		}
+		var presetData1 = "<div style='overflow: auto;' class='item'>";
+		var presetData2 = "<div class='ui right floated green animated button' tabindex='0'>";
+		var presetData3 = "<div class='visible content'>Done</div><div class='hidden content'><i class='check icon'></i></div></div></div>";
+		var li = "<span>" + text + "</span>";
+		li = presetData1 + li + presetData2 + presetData3;
+		document.getElementById("list").innerHTML += li;
+		document.getElementById("input").value = ""; // clear the value
 	}
-	var presetData1 = "<div style='overflow: auto;' class='item'>";
-	var presetData2 = "<div class='ui right floated green animated button' tabindex='0'>";
-	var presetData3 = "<div class='visible content'>Done</div><div class='hidden content'><i class='check icon'></i></div></div></div>";
-	var li = "<span>" + text + "</span>";
-	li = presetData1 + li + presetData2 + presetData3;
-	document.getElementById("list").innerHTML += li;
-	document.getElementById("input").value = ""; // clear the value
-}
 
 });
 $('.tabular.menu .item').tab();
@@ -70,21 +109,21 @@ $(window).scroll(function () {
 });
 
 
-$(document).on('scroll', function () {
-	var pageTop = $(document).scrollTop();
-	var pageBottom = pageTop + $(window).height();
-	var tags = $('section');
+// $(document).on('scroll', function () {
+// 	var pageTop = $(document).scrollTop();
+// 	var pageBottom = pageTop + $(window).height();
+// 	var tags = $('section');
 
-	for (var i = 0; i < tags.length; i++) {
-		var tag = tags[i];
+// 	for (var i = 0; i < tags.length; i++) {
+// 		var tag = tags[i];
 
-		if ($(tag).position().top < pageBottom) {
-			$(tag).addClass('visible');
-		} else {
-			$(tag).removeClass('visible');
-		}
-	}
-});
+// 		if ($(tag).position().top < pageBottom) {
+// 			$(tag).addClass('visible');
+// 		} else {
+// 			$(tag).removeClass('visible');
+// 		}
+// 	}
+// });
 
 google.charts.load('current', {
 	packages: ['corechart', 'line']

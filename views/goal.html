@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <link rel="stylesheet" type="text/css" href="../stylesheets/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"
@@ -27,6 +28,7 @@
         <div class="eight wide column">
             <div class="ui segment">
 
+
                 <div class="ui tabular menu">
                     <div class="item" data-tab="tab-name">Current Goals</div>
                     <div class="item" data-tab="tab-name2">Completed Goals</div>
@@ -36,23 +38,45 @@
 
 
 
-                <div class="ui tab" data-tab="tab-name">
+                <div style="padding-top: 20px;" class="ui tab" data-tab="tab-name">
+
+                    <div id="container">
+                        <h1 id="goalsTable">Todo List <i class="fa fa-plus"></i></h1>
+                        <input type="text" placeholder="Add new todo...">
+
+                        <ul>
+                            <li><span><i class="fa fa-trash"></i></span> Go to potions class</li>
+                            <li><span><i class="fa fa-trash"></i></span> Visit Hogwart</li>
+                            <li><span><i class="fa fa-trash"></i></span> Escape from Azkaban</li>
+                        </ul>
+
+
+                    </div>
+                </div>
+                <div class="ui tab" data-tab="tab-name2">
+                        <button style="margin: -1.5em 0;" onclick="showInput()" class="ui left floated icon button"
+                        id="addGoal">
+                        <i class="plus icon"></i>
+                    </button>
+
                     <div class="column">
-                        <input type='text' id='input' />
-                        <input type='button' value='add to list' id='add' />
+                        <div style="display: none;" id="inputGoal">
+                            <input type='text' id='input' />
+                            <button class="ui inverted green button" id="add">Save</button>
+                        </div>
 
-                        
+
+                        <div class="ui vertical fluid menu">
 
 
-                        <div class="ui vertical fluid menu" >
                             <div style="overflow: auto;" class="item">
-                                <span>Go on a 5 mile run</span>
                                 <div class="ui right floated green animated button" tabindex="0">
                                     <div class="visible content">Done</div>
                                     <div class="hidden content">
                                         <i class="check icon"></i>
                                     </div>
                                 </div>
+                                <span>Go on a 5 mile run</span>
                             </div>
                             <div style="overflow: auto;" class="item">
                                 <span>Do 50 push ups</span>
@@ -92,14 +116,11 @@
                             </div>
 
                             <div id='list'>
-                                
-                            
+
+
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="ui tab" data-tab="tab-name2">
-                    2
                 </div>
             </div>
         </div>
