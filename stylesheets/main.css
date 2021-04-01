@@ -196,14 +196,9 @@ span {
     opacity: 0;
 }
 
-<<<<<<< HEAD
-input:focus::-webkit-input-placeholder {
-    opacity: 0;
-=======
 .cols{
 	width: fit-content;
     margin: auto;
->>>>>>> b1bf3800cd2cb77538d2f88047aa54f4eb688c3c
 }
 
 
