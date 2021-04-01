@@ -101,12 +101,12 @@ $(document).ready(function () {
 });
 $('.tabular.menu .item').tab();
 
-$(window).scroll(function () {
-	$("#fade-scroll").each(function () {
-		$(this).css("opacity", 1 - $(window).scrollTop() / $('#fade-scroll').height());
-	});
+// $(window).scroll(function () {
+// 	$("#fade-scroll").each(function () {
+// 		$(this).css("opacity", 1 - $(window).scrollTop() / $('#fade-scroll').height());
+// 	});
 
-});
+// });
 
 
 // $(document).on('scroll', function () {
