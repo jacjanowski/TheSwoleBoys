@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Swole Boys</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"
+        integrity="sha256-t8GepnyPmw9t+foMh3mKNvcorqNHamSKtKRxxpUEgFI=" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+
+<body>
+
+    <h1>
+
+        <a href="../index.html"> <button
+                style="background-color: #946f9e; margin-left: 1%;position: absolute; width: 5%; height: 7%; display: block;"
+                class="ui icon button">
+                <i class="big home icon"></i>
+            </button></a>
+        Find Others to Connect With
+    </h1>
+    <div class="ui center aligned equal width grid">
+
+        <div class="eight wide column">
+            <div class="ui segment">
+
+
+                <div class="ui tabular menu">
+                    <div class="item" data-tab="tab-name">Current Goals</div>
+                    <div class="item" data-tab="tab-name2">Completed Goals</div>
+                </div>
+
+
+
+
+
+                <div style="padding-top: 20px;" class="ui tab" data-tab="tab-name">
+
+                    <div id="container">
+                        <h1 id="goalsTable">Goal Tracker <i class="fa fa-plus"></i></h1>
+                        <input type="text" placeholder="Add new goal">
+
+                        <ul>
+                            <li><span><i class="fa fa-trash"></i></span> Bench 225 lbs</li>
+                            <li><span><i class="fa fa-trash"></i></span> Run on treadmill for 20 min</li>
+                            <li><span><i class="fa fa-trash"></i></span> Drink 128 oz. today</li>
+                        </ul>
+
+
+                    </div>
+                </div>
+                <div class="ui tab" data-tab="tab-name2">
+                    <!-- <button style="margin: -1.5em 0;" onclick="showInput()" class="ui left floated icon button"
+                        id="addGoal">
+                        <i class="plus icon"></i>
+                    </button> -->
+
+                    <div class="column">
+                        <!-- <div style="display: none;" id="inputGoal">
+                            <input type='text' id='input' />
+                            <button class="ui inverted green button" id="add">Save</button>
+                        </div> -->
+
+
+                        <div class="ui vertical fluid menu">
+
+
+                            <div style="overflow: auto; background-color: #C3F6C8; text-decoration: line-through;"
+                                class="item">
+                                <h3>Go on a 5 mile run</h3>
+                                <div class="ui right floated green animated button" tabindex="0">
+                                    <div class="visible content">Done</div>
+                                    <div class="hidden content">
+                                        <i class="check icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="overflow: auto; background-color: #C3F6C8; text-decoration: line-through;"
+                                class="item">
+                                <h3>Do 50 push ups</h3>
+                                <div class="ui right floated green animated button" tabindex="0">
+                                    <div class="visible content">Done</div>
+                                    <div class="hidden content">
+                                        <i class="check icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="overflow: auto; background-color: #C3F6C8; text-decoration: line-through;"
+                                class="item">
+                                <h3>Stretch for 20 min</h3>
+                                <div class="ui right floated green animated button" tabindex="0">
+                                    <div class="visible content">Done</div>
+                                    <div class="hidden content">
+                                        <i class="check icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="overflow: auto; background-color: #C3F6C8; text-decoration: line-through;"
+                                class="item">
+                                <h3>Stretch for 20 min</h3>
+                                <div class="ui right floated green animated button" tabindex="0">
+                                    <div class="visible content">Done</div>
+                                    <div class="hidden content">
+
+                                    </div>
+                                </div>
+                                <div style="overflow: auto; background-color: #C3F6C8; text-decoration: line-through;"
+                                    class="item">
+                                    <h3>Stretch for 20 min</h3>
+                                    <div class="ui right floated green animated button" tabindex="0">
+                                        <div class="visible content">Done</div>
+                                        <div class="hidden content">
+                                            <i class="check icon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id='list'>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script type="text/javascript" src="../stylesheets/model.js"></script>
+</body>
+
+
+
+</html>
