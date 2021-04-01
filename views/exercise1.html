@@ -24,49 +24,88 @@
     <div class="ui three column center aligned grid">
         <div class="row">
             <div class="column">
-                <a href="../views/chest.html">
-                    <img style="border: 2px solid black;" class="ui circular image" src="../stylesheets/images/chest.png">
-                </a>
-                <h3>Chest</h3>
+                <div class="cols">
+                    <a href="../views/chest.html">
+                        <img style="border: 2px solid black;" class="ui circular image" src="../stylesheets/images/chest.png">
+                    </a>
+                    <h3>Chest</h3>
+                </div>
             </div>
             <div class="column">
-                <a href="../views/core.html">
-                    <img style="border: 2px solid black;" class="ui circular image" src="../stylesheets/images/abs.png">
-                </a>
-                <h3>Core</h3>
+                <div class="cols">
+                    <a href="../views/core.html">
+                        <img style="border: 2px solid black;" class="ui circular image" src="../stylesheets/images/abs.png">
+                    </a>
+                    <h3>Core</h3>
+                </div>
             </div>
 
             <div class="column">
-                <a href="../views/back.html">
-                    <img style="border: 2px solid black;" class="ui circular image" src="../stylesheets/images/back.png">
-                </a>
-                <h3>Back</h3>
+                <div class="cols">
+                    <a href="../views/back.html">
+                        <img style="border: 2px solid black;" class="ui circular image" src="../stylesheets/images/back.png">
+                    </a>
+                    <h3>Back</h3>
+                </div>   
             </div>
         </div>
         <div class="row">
             <div class="column">
-                <a href="../views/arms.html">
-                    <img style="border: 2px solid black;" class="ui circular image" src="../stylesheets/images/arms.png">
-                </a>
-                <h3>Arms</h3>
+                <div class="cols">
+                    <a href="../views/arms.html">
+                        <img style="border: 2px solid black;" class="ui circular image" src="../stylesheets/images/arms.png">
+                    </a>
+                    <h3>Arms</h3>
+                </div>
             </div>
             <div class="column">
-                <a href="../views/cardio.html">
-                    <img style="border: 2px solid black;" class="ui circular image" src="../stylesheets/images/cardio.png">
-                </a>
-                <h3>Cardio</h3>
+                <div class="cols">
+                    <a href="../views/cardio.html">
+                        <img style="border: 2px solid black;" class="ui circular image" src="../stylesheets/images/cardio.png">
+                    </a>
+                    <h3>Cardio</h3>
+                </div>
+                
             </div>
 
             <div class="column">
-                <a href="../views/exercise.html">
-                    <img style="border: 2px solid black;" class="ui circular image" src="../stylesheets/images/legs.png">
-                </a>
-                <h3>Legs</h3>
+                <div class="cols">
+                    <a href="../views/exercise.html">
+                        <img style="border: 2px solid black;" class="ui circular image" src="../stylesheets/images/legs.png">
+                    </a>
+                    <h3>Legs</h3>
+                </div>
+                
             </div>
         </div>
 
 
     </div>
+
+
+    <script>
+        document.querySelectorAll('.cols').forEach(el => {
+			// el.addEventListener('mousemove', handleMove);
+			el.addEventListener('mouseover', function(){
+				el.style.transform = 'perspective(500px) scale(1.1) ';
+			})
+			console.log(el);
+			/* Add listener for mouseout event, remove the rotation */
+			el.addEventListener('mouseout', function() {
+				el.style.transform = 'perspective(500px) scale(1)'
+			})
+
+			/* Add listener for mousedown event, to simulate click */
+			el.addEventListener('mousedown', function() {
+				el.style.transform = 'perspective(500px) scale(0.9)'
+			})
+
+			/* Add listener for mouseup, simulate release of mouse click */
+			el.addEventListener('mouseup', function() {
+				el.style.transform = 'perspective(500px) scale(1.1)'
+			})
+		});
+    </script>
 </body>
 
 </html>
