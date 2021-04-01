@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
 .carousel-wrapper{
-  height:700px;
+  height:80%;
   position:relative;
   width:800px;
   margin:0 auto;
@@ -66,7 +66,7 @@
    background-size:cover;
 }
 .item-3{
-  background:url('https://images.unsplash.com/photo-1550345332-09e3ac987658?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');
+  background:url('https://cdn.aarp.net/content/dam/aarp/health/healthy-living/2017/04/1140-promo-how-breathe-during-exercise.imgcache.revbd93408f9161e813b80e4bef2c23ed21.jpg');
    background-size:cover;
 }
 .item-4{
@@ -74,7 +74,7 @@
    background-size:cover;
 }
 .item-5{
-  background:url('https://images.unsplash.com/photo-1572334029868-7d0eec63a040?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=841&q=80');
+  background:url('https://www.tentamus.com/wp-content/uploads/2018/07/Drinking-Water-700x409.jpg');
    background-size:cover;
 }
 .item-6{

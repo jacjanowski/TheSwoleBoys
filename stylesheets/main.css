@@ -189,6 +189,9 @@ span {
     opacity: 0;
 }
 
+input:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
 
 
 /* When the hamburger is displayed */
