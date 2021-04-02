@@ -1,26 +1,32 @@
-// 
+// $('#toggle').click(function(){
+// 	$(this).toggleClass('active');
+// 	if (this.classList.contains("active")){
 
+// 	}
+//  });
 
-// $('#soccer').click(function() {
-//     $("#txtAge").toggle(this.checked);
+$(".toggle").click(function () {
+	if (this.classList.contains("active")) {
+		this.classList.remove("active");
+		this.innerHTML = '<i class="add icon"></i>' + "Add Friend";
+	} else {
+		this.classList.add("active");
+		this.innerText = "Added!";
+	}
+})
+
+// document.getElementById("toggle").addEventListener("click", function () {
+
+// 	if (this.classList.contains("active")) {
+// 		this.classList.remove("active");
+// 		this.innerHTML = '<i class="add icon"></i>' + "Add Friend";
+// 	} else {
+// 		this.classList.add("active");
+// 		this.innerText = "Added!";
+// 	}
 // });
-// $('#baseball').click(function() {
-//     $("#txtAge").toggle(this.checked);
-// });
-// $('#football').click(function() {
-//     $("#txtAge").toggle(this.checked);
-// });
 
 
-// function checkFluency(){
-// 	var checkbox = document.getElementById('soccer');
-// 	var t = document.getElementById('tester');
-//     if (checkbox.checked != false) {
-// 	    $('#chart_div').show();
-//     }else{
-// 	    $('#chart_div').hide();
-//     }
-// }
 $('ul').on('click', 'li', function () {
 	$(this).toggleClass("completed");
 });

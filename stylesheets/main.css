@@ -187,7 +187,25 @@ ul li:hover span {
 	margin: 0;
 }
 
+.event>.content:hover {
+	transition: 1s;
+	background-color: rgb(235, 235, 235);
+}
 
+#inbox {
+    
+    padding: 2%;
+    display:block;
+    float:right;
+    color: white;
+    text-align:center;
+    
+}
+div#main {
+	margin: 0 2%;
+	display: flex;
+	justify-content:space-between; 
+}
 input {
     font-size: 18px;
     background-color: #f7f7f7;
