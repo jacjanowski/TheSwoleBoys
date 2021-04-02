@@ -29,112 +29,117 @@
             class="ui icon button">
             <i class="big home icon"></i>
           </button></a>
-Track Your Goals    
+          Goals
       </h1>
+
     <div class="ui center aligned equal width grid">
-
+        <div class="ui two buttons" style="width: 58%;height: 4rem;">
+            <button class="ui active button" id="CurrBt">Current</button>
+            <button class="ui button" id="CompBt">Completed</button>
+        </div>
         <div class="eight wide column">
+            
             <div class="ui segment">
-
-
-                <div class="ui tabular menu">
-                    <div class="item" data-tab="tab-name">Current Goals</div>
-                    <div class="item" data-tab="tab-name2">Completed Goals</div>
-                </div>
-
-
-
-
-
-                <div style="padding-top: 20px;" class="ui tab" data-tab="tab-name">
+                
+                <div style="padding-top: 20px;" class="" id="CurrSec">
 
                     <div id="container">
                         <h1 id="goalsTable">Goal Tracker <i class="fa fa-plus"></i></h1>
                         <input type="text" placeholder="Add new goal">
-
+    
                         <ul>
                             <li><span><i class="fa fa-trash"></i></span> Bench 225 lbs</li>
                             <li><span><i class="fa fa-trash"></i></span> Run on treadmill for 20 min</li>
                             <li><span><i class="fa fa-trash"></i></span> Drink 128 oz. today</li>
                         </ul>
-
-
+    
+    
                     </div>
                 </div>
-                <div class="ui tab" data-tab="tab-name2">
-                    <!-- <button style="margin: -1.5em 0;" onclick="showInput()" class="ui left floated icon button"
-                        id="addGoal">
-                        <i class="plus icon"></i>
-                    </button> -->
-
-                    <div class="column">
-                        <!-- <div style="display: none;" id="inputGoal">
-                            <input type='text' id='input' />
-                            <button class="ui inverted green button" id="add">Save</button>
-                        </div> -->
 
 
-                        <div class="ui vertical fluid menu">
 
 
-                            <div style="overflow: auto; background-color: #C3F6C8; text-decoration: line-through;" class="item">
-                                <h3>Go on a 5 mile run</h3>
-                                <div class="ui right floated green animated button" tabindex="0">
-                                    <div class="visible content">Done</div>
-                                    <div class="hidden content">
-                                        <i class="check icon"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="overflow: auto; background-color: #C3F6C8; text-decoration: line-through;" class="item">
-                                <h3>Do 50 push ups</h3>
-                                <div class="ui right floated green animated button" tabindex="0">
-                                    <div class="visible content">Done</div>
-                                    <div class="hidden content">
-                                        <i class="check icon"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="overflow: auto; background-color: #C3F6C8; text-decoration: line-through;" class="item">
-                                <h3>Stretch for 20 min</h3>
-                                <div class="ui right floated green animated button" tabindex="0">
-                                    <div class="visible content">Done</div>
-                                    <div class="hidden content">
-                                        <i class="check icon"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="overflow: auto; background-color: #C3F6C8; text-decoration: line-through;" class="item">
-                                <h3>Stretch for 20 min</h3>
-                                <div class="ui right floated green animated button" tabindex="0">
-                                    <div class="visible content">Done</div>
-                                    <div class="hidden content">
-                                        <i class="check icon"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="overflow: auto; background-color: #C3F6C8; text-decoration: line-through;" class="item">
-                                <h3>Stretch for 20 min</h3>
-                                <div class="ui right floated green animated button" tabindex="0">
-                                    <div class="visible content">Done</div>
-                                    <div class="hidden content">
-                                        <i class="check icon"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div id='list'>
+                <div class="ui vertical fluid menu" id="CompSec" style="display: none;">
 
 
+                    <div style="overflow: auto; background-color: #C3F6C8; text-decoration: line-through;" class="item">
+                        <h3>Go on a 5 mile run</h3>
+                        <div class="ui right floated green animated button" tabindex="0">
+                            <div class="visible content">Done</div>
+                            <div class="hidden content">
+                                <i class="check icon"></i>
                             </div>
                         </div>
                     </div>
+                    <div style="overflow: auto; background-color: #C3F6C8; text-decoration: line-through;" class="item">
+                        <h3>Do 50 push ups</h3>
+                        <div class="ui right floated green animated button" tabindex="0">
+                            <div class="visible content">Done</div>
+                            <div class="hidden content">
+                                <i class="check icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="overflow: auto; background-color: #C3F6C8; text-decoration: line-through;" class="item">
+                        <h3>Stretch for 20 min</h3>
+                        <div class="ui right floated green animated button" tabindex="0">
+                            <div class="visible content">Done</div>
+                            <div class="hidden content">
+                                <i class="check icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="overflow: auto; background-color: #C3F6C8; text-decoration: line-through;" class="item">
+                        <h3>Stretch for 20 min</h3>
+                        <div class="ui right floated green animated button" tabindex="0">
+                            <div class="visible content">Done</div>
+                            <div class="hidden content">
+                                <i class="check icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="overflow: auto; background-color: #C3F6C8; text-decoration: line-through;" class="item">
+                        <h3>Stretch for 20 min</h3>
+                        <div class="ui right floated green animated button" tabindex="0">
+                            <div class="visible content">Done</div>
+                            <div class="hidden content">
+                                <i class="check icon"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id='list'>
+
+
+                    </div>
                 </div>
+
+
             </div>
         </div>
 
     </div>
+    <script>
+        let currSec = document.getElementById("CurrSec");
+        let compSec = document.getElementById("CompSec");
 
+        document.getElementById("CurrBt").addEventListener("click",function(){
+            currSec.style.display = "block";
+            compSec.style.display = "none";
+            this.classList.add("active");
+            document.getElementById("CompBt").classList.remove("active");
+        });
+
+        document.getElementById("CompBt").addEventListener("click",function(){
+            currSec.style.display = "none";
+            compSec.style.display = "block";
+            this.classList.add("active");
+            document.getElementById("CurrBt").classList.remove("active");
+        });
+
+
+    </script>
     <script type="text/javascript" src="../stylesheets/model.js"></script>
 </body>
 
