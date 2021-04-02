@@ -152,6 +152,16 @@ ul {
     text-decoration: line-through;
 }
 
+.description li {
+	text-align: start;
+	cursor: pointer;
+	font-family: 'Quicksand', sans-serif;
+    height: 25px;
+	line-height: 40px;
+	font-weight: bolder;
+    
+}
+
 ul li {
 	text-align: start;
 	cursor: pointer;
@@ -169,6 +179,15 @@ ul li:hover span {
     width: 40px;
     opacity: 1.0;
 }
+.ui.feed>.event>.content .meta {
+	display: grid;
+}
+
+.ui.feed, .ui.feed>.event>.content .meta> * {
+	margin: 0;
+}
+
+
 input {
     font-size: 18px;
     background-color: #f7f7f7;
@@ -201,6 +220,9 @@ span {
     margin: auto;
 }
 
+.three.stackable {
+	text-align: -webkit-center;
+}
 
 /* When the hamburger is displayed */
 @media (max-width: 768px){
