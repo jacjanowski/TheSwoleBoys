@@ -15,6 +15,14 @@ $(".toggle").click(function () {
 	}
 })
 
+$("#inbox").click(function(){
+
+	$('.ui.modal').modal('show');
+});
+
+
+
+
 // document.getElementById("toggle").addEventListener("click", function () {
 
 // 	if (this.classList.contains("active")) {
@@ -70,17 +78,17 @@ function showInput() {
 	}
 }
 
-$(document).ready(function () {
+// $(document).ready(function () {
 
-	$("#modalBtn").click(function () {
-		$('#modalShow').modal('show');
-	});
-	$("#title").animate({
-		'font-size': '40px',
-		'opacity': '1',
-		'color': 'white'
-	}, 1000);
-});
+// 	$("#modalBtn").click(function () {
+// 		$('#modalShow').modal('show');
+// 	});
+// 	$("#title").animate({
+// 		'font-size': '40px',
+// 		'opacity': '1',
+// 		'color': 'white'
+// 	}, 1000);
+// });
 
 $(document).ready(function () {
 	$('a').click(function () {

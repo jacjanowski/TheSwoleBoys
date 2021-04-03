@@ -22,11 +22,38 @@
 
 <body>
 
+    <div class="ui modal">
+        <i class="close icon"></i>
+        <div class="header">
+            Anthony Jameson
+        </div>
+        <div class="image content">
+            <div class="ui medium image">
+                <img src="https://www.bodybuilding.com/fun/images/2015/fitness360-steve-cook.jpg">
+            </div>
+            <div class="description">
+                <div class="ui header">Someone wants to get connected with you!</div>
+                <p style="font-family: 'Quicksand', sans-serif; font-size: 22px;">I am 27 years old and am getting back into the gym. I would love to have someone that's a bit more experienced than I that can teach me some new exercises to help me achieve my best form.</p>
+                
+            </div>
+        </div>
+        <div class="actions">
+            <div class="ui red button">
+                Nope
+            </div>
+            <div class="ui positive right labeled icon button">
+                Connect
+                <i class="checkmark icon"></i>
+            </div>
+        </div>
+    </div>
+
+
+
     <h1>Find Others to Connect With</h1>
     <div id="main">
         <div>
-            <a href="../index.html"> <button
-                    style="background-color: #946f9e;position: absolute; display: block;"
+            <a href="../index.html"> <button style="background-color: #946f9e;position: absolute; display: block;"
                     class="ui icon button">
                     <i class="big home icon"></i>
                 </button>
@@ -34,14 +61,20 @@
         </div>
         <div>
 
-            <a href="../index.html">
-                <button class="ui icon button">
+            <a>
+                <button id="inbox" class="ui icon button">
                     <i class="big mail icon"></i>
+
                 </button>
+                <img style="margin-top: -5px; max-height: 30px; display: block; max-width: 30px; margin-right: 29px; cursor: initial;"
+                    src="https://img.pngio.com/download-number-1-png-transparent-icon-11-free-transparent-png-red-circle-1png-600_516.png"
+                    alt="">
+
             </a>
+
         </div>
     </div>
-    <div class="three column stackable ui grid">
+    <div class="three column stackable ui grid" style="margin: 0 5%;">
         <div class="column">
             <div style="height: 100%" class="ui segment">
                 <h2 style="font-family: 'Quicksand', sans-serif;">About Me</h2>

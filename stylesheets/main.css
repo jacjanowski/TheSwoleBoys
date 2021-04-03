@@ -188,24 +188,17 @@ ul li:hover span {
 }
 
 .event>.content:hover {
-	transition: 1s;
+	transition: .9s;
 	background-color: rgb(235, 235, 235);
 }
 
-#inbox {
-    
-    padding: 2%;
-    display:block;
-    float:right;
-    color: white;
-    text-align:center;
-    
-}
+
 div#main {
 	margin: 0 2%;
 	display: flex;
 	justify-content:space-between; 
 }
+
 input {
     font-size: 18px;
     background-color: #f7f7f7;
@@ -269,6 +262,7 @@ span {
 
 /* When the hamburger is NOT there yet */
 @media (min-width: 769px){
+
 	.mainMenu{
 		display: flex;
 		
