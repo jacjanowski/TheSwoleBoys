@@ -15,27 +15,27 @@ $(".toggle").click(function () {
 	}
 })
 
-$("#inbox").click(function(){
+$("#inbox").click(function () {
 
-    $('#modal_one').modal('show');
+	$('#modal_one').modal('show');
 });
 
-$("#modal_two_link").click(function(){
+$("#modal_two_link").click(function () {
 
-    $('#modal_two').modal('show');
+	$('#modal_two').modal('show');
 });
 
-$("#modal_three_link").click(function(){
+$("#modal_three_link").click(function () {
 
-    $('#modal_three').modal('show');
+	$('#modal_three').modal('show');
 });
-$("#modal_four_link").click(function(){
+$("#modal_four_link").click(function () {
 
-    $('#modal_four').modal('show');
+	$('#modal_four').modal('show');
 });
-$("#modal_five_link").click(function(){
+$("#modal_five_link").click(function () {
 
-    $('#modal_five').modal('show');
+	$('#modal_five').modal('show');
 });
 
 
@@ -160,7 +160,11 @@ $('.tabular.menu .item').tab();
 google.charts.load('current', {
 	packages: ['corechart', 'line']
 });
+google.charts.load('current', { 'packages': ['bar'] });
+google.charts.setOnLoadCallback(drawChart);
 google.charts.setOnLoadCallback(drawCurveTypes);
+google.charts.load('current', { 'packages': ['corechart'] });
+google.charts.setOnLoadCallback(drawChart);
 
 function drawCurveTypes() {
 	var data = new google.visualization.DataTable();
@@ -185,10 +189,10 @@ function drawCurveTypes() {
 
 	var options = {
 		hAxis: {
-			title: 'Time'
+			title: 'Month'
 		},
 		vAxis: {
-			title: 'Popularity'
+			title: 'Weight (lbs)'
 		},
 		series: {
 			1: {
@@ -207,8 +211,8 @@ function drawCurveTypes2() {
 	var data2 = new google.visualization.DataTable();
 
 	data2.addColumn('number', 'X');
-	data2.addColumn('number', 'Dogs');
-	data2.addColumn('number', 'Cats');
+	data2.addColumn('number', 'Bench');
+	data2.addColumn('number', 'Deadlift');
 
 
 	data2.addRows([
@@ -222,10 +226,10 @@ function drawCurveTypes2() {
 	]);
 	var options = {
 		hAxis: {
-			title: 'Time'
+			title: 'Month'
 		},
 		vAxis: {
-			title: 'Popularity'
+			title: 'Weight (lbs)'
 		},
 		series: {
 			1: {
@@ -242,8 +246,8 @@ function drawCurveTypes3() {
 	var data2 = new google.visualization.DataTable();
 
 	data2.addColumn('number', 'X');
-	data2.addColumn('number', 'Dogs');
-	data2.addColumn('number', 'Cats');
+	data2.addColumn('number', 'Bench');
+	data2.addColumn('number', 'Deadlift');
 	data2.addColumn('number', 'Overhead');
 
 
@@ -259,10 +263,10 @@ function drawCurveTypes3() {
 	]);
 	var options = {
 		hAxis: {
-			title: 'Time'
+			title: 'Month'
 		},
 		vAxis: {
-			title: 'Popularity'
+			title: 'Weight (lbs)'
 		},
 		series: {
 			1: {
@@ -278,8 +282,8 @@ function drawCurveTypes4() {
 	var data2 = new google.visualization.DataTable();
 
 	data2.addColumn('number', 'X');
-	data2.addColumn('number', 'Dogs');
-	data2.addColumn('number', 'Cats');
+	data2.addColumn('number', 'Bench');
+	data2.addColumn('number', 'Deadlift');
 	data2.addColumn('number', 'Overhead');
 	data2.addColumn('number', 'Squats');
 
@@ -295,10 +299,10 @@ function drawCurveTypes4() {
 	]);
 	var options = {
 		hAxis: {
-			title: 'Time'
+			title: 'Month'
 		},
 		vAxis: {
-			title: 'Popularity'
+			title: 'Weight (lbs)'
 		},
 		series: {
 			1: {
@@ -309,4 +313,185 @@ function drawCurveTypes4() {
 
 	var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
 	chart.draw(data2, options);
+}
+
+function drawChart() {
+	var data = google.visualization.arrayToDataTable([
+		['Mon', 145, 146, 145, 148],
+		['Tue', 145, 145, 147, 147],
+		['Wed', 146, 147, 148, 148],
+		['Thu', 147, 147, 146, 147],
+		['Fri', 146, 146, 149, 150]
+		// Treat the first row as data.
+	], true);
+
+
+	var options = {
+		vAxis: {
+			title: 'Weight (lbs)',
+			titleTextStyle: {
+				color: '#000000',
+				fontSize: 18
+			}
+		},
+		hAxis: {
+			title: 'Increase/Decrease in Weight Overtime',
+			titleTextStyle: {
+				color: '#000000',
+				fontSize: 18
+			}
+		},
+		legend: 'none',
+		bar: { groupWidth: '100%' }, // Remove space between bars.
+		candlestick: {
+			fallingColor: { strokeWidth: 0, fill: '#a52714' }, // red
+			risingColor: { strokeWidth: 0, fill: '#0f9d58' }   // green
+		}
+	};
+
+	var chart = new google.visualization.CandlestickChart(document.getElementById('chart_div2'));
+	chart.draw(data, options);
+}
+
+function drawChart2() {
+	var data = google.visualization.arrayToDataTable([
+		['Week 1', 140, 140, 145, 145],
+		['Week 2', 144, 145, 147, 147],
+		['Week 3', 145, 145, 142, 146],
+		['Week 4', 145, 145, 147, 147],
+		['Week 5', 146, 147, 149, 150]
+		// Treat the first row as data.
+	], true);
+
+
+	var options = {
+		vAxis: {
+			title: 'Weight (lbs)',
+			titleTextStyle: {
+				color: '#000000',
+				fontSize: 18
+			}
+		},
+		hAxis: {
+			title: 'Increase/Decrease in Weight Overtime',
+			titleTextStyle: {
+				color: '#000000',
+				fontSize: 18
+			}
+		},
+		legend: 'none',
+		bar: { groupWidth: '100%' }, // Remove space between bars.
+		candlestick: {
+			fallingColor: { strokeWidth: 0, fill: '#a52714' }, // red
+			risingColor: { strokeWidth: 0, fill: '#0f9d58' }   // green
+		}
+	};
+
+	var chart = new google.visualization.CandlestickChart(document.getElementById('chart_div2'));
+	chart.draw(data, options);
+}
+
+function drawChart3() {
+	var data = google.visualization.arrayToDataTable([
+		['January', 135, 135, 140, 140],
+		['February', 139, 141, 140, 145],
+		['March', 142, 143, 144, 144],
+		['April', 143, 146, 145, 147],
+		['May', 146, 146, 150, 153]
+		// Treat the first row as data.
+	], true);
+
+
+	var options = {
+		vAxis: {
+			title: 'Weight (lbs)',
+			titleTextStyle: {
+				color: '#000000',
+				fontSize: 18
+			}
+		},
+		hAxis: {
+			title: 'Increase/Decrease in Weight Overtime',
+			titleTextStyle: {
+				color: '#000000',
+				fontSize: 18
+			}
+		},
+		legend: 'none',
+		bar: { groupWidth: '100%' }, // Remove space between bars.
+		candlestick: {
+			fallingColor: { strokeWidth: 0, fill: '#a52714' }, // red
+			risingColor: { strokeWidth: 0, fill: '#0f9d58' }   // green
+		}
+	};
+
+	var chart = new google.visualization.CandlestickChart(document.getElementById('chart_div2'));
+	chart.draw(data, options);
+}
+
+
+function drawChart4() {
+	var data = google.visualization.arrayToDataTable([
+		['Exercise', 'Miles Traveled', 'Time Elapsed (hour)', 'Weight lost'],
+		['Cycling', 10, 1, 2],
+		['Running', 5, .8, 3],
+		['Swimming', 5, 1, 2],
+		['Stairs', 2, .5, 1]
+	]);
+
+	var options = {
+		chart: {
+			title: 'Your Endurance Performance',
+			subtitle: 'Associates Workouts with Time and Weight Loss',
+		},
+		bars: 'horizontal' // Required for Material Bar Charts.
+	};
+
+	var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+	chart.draw(data, google.charts.Bar.convertOptions(options));
+}
+
+function drawChart5() {
+	var data = google.visualization.arrayToDataTable([
+		['Exercise', 'Miles Traveled', 'Time Elapsed (hour)', 'Weight lost'],
+		['Cycling', 55, 6, 8],
+		['Running', 24, 4, 9],
+		['Swimming', 18, 5, 6],
+		['Stairs', 11, 3, 5]
+	]);
+
+	var options = {
+		chart: {
+			title: 'Your Endurance Performance',
+			subtitle: 'Associates Workouts with Time and Weight Loss',
+		},
+		bars: 'horizontal' // Required for Material Bar Charts.
+	};
+
+	var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+	chart.draw(data, google.charts.Bar.convertOptions(options));
+}
+
+function drawChart6() {
+	var data = google.visualization.arrayToDataTable([
+		['Exercise', 'Miles Traveled', 'Time Elapsed (hour)', 'Weight lost'],
+		['Cycling', 300, 60, 25],
+		['Running', 200, 42, 31],
+		['Swimming', 79, 56, 17],
+		['Stairs', 51, 39, 11]
+	]);
+
+	var options = {
+		chart: {
+			title: 'Your Endurance Performance',
+			subtitle: 'Associates Workouts with Time and Weight Loss',
+		},
+		bars: 'horizontal' // Required for Material Bar Charts.
+	};
+
+	var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+	chart.draw(data, google.charts.Bar.convertOptions(options));
 }
