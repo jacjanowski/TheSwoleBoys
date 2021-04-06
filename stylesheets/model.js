@@ -17,7 +17,25 @@ $(".toggle").click(function () {
 
 $("#inbox").click(function(){
 
-	$('.ui.modal').modal('show');
+    $('#modal_one').modal('show');
+});
+
+$("#modal_two_link").click(function(){
+
+    $('#modal_two').modal('show');
+});
+
+$("#modal_three_link").click(function(){
+
+    $('#modal_three').modal('show');
+});
+$("#modal_four_link").click(function(){
+
+    $('#modal_four').modal('show');
+});
+$("#modal_five_link").click(function(){
+
+    $('#modal_five').modal('show');
 });
 
 
