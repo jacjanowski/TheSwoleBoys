@@ -235,6 +235,15 @@ span {
 	text-align: -webkit-center;
 }
 
+.ui.vertical.tabular.menu .item {
+	font-size: 24px;
+}
+
+.ui.vertical.tabular.menu .item:hover {
+	background-color: rgb(198, 160, 241);
+	transition-duration: .7s;
+}
+
 /* When the hamburger is displayed */
 @media (max-width: 768px){
 	.mainMenu{
