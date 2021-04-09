@@ -259,12 +259,19 @@ span {
 	/* .ui.grid {
 		justify-content: normal;
 	} */
-
+	#container{
+		max-width: 300px;
+	}
 
 	#fade-scroll {
 		max-height: 500px;
 	}
-
+	/* button.ui.icon.button {
+		margin-top: 2%;
+	} */
+	h1{
+		font-size: large;
+	}
 
 }
 
@@ -285,6 +292,10 @@ span {
 	}
 	#menuBar {
 		margin-bottom: 20px;
+	}
+
+	button.ui.icon.button {
+		margin-top: 2%;
 	}
 	
 
