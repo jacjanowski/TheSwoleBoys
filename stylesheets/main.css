@@ -1,6 +1,8 @@
 
 body {
-	background-color: rgb(200, 200, 245);
+	background: rgb(238,174,202);
+	background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+	/* background-color: rgb(200, 200, 245); */
 }
 h1,h3{
 	font-family: 'Quicksand', sans-serif;
@@ -240,8 +242,11 @@ span {
 }
 
 .ui.vertical.tabular.menu .item:hover {
-	background-color: rgb(198, 160, 241);
+	background-color: rgb(198, 124, 184);
 	transition-duration: .7s;
+}
+.ui.vertical.tabular.menu .item.active {
+	background-color: rgb(198, 124, 184);
 }
 
 /* When the hamburger is displayed */
@@ -272,6 +277,9 @@ span {
 	h1{
 		font-size: large;
 	}
+	button.ui.icon.button {
+		margin-top: 2%;
+	}
 
 }
 
@@ -294,9 +302,7 @@ span {
 		margin-bottom: 20px;
 	}
 
-	button.ui.icon.button {
-		margin-top: 2%;
-	}
+
 	
 
 }
