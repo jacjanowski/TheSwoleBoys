@@ -15,6 +15,13 @@ $(".toggle").click(function () {
 	}
 })
 
+
+$("a.item").click(function () {
+	if (!this.classList.contains("active")) {
+		document.getElementById('placeholder').style.display = "none";
+	} 
+})
+
 $("#inbox").click(function () {
 
 	$('#modal_one').modal('show');
