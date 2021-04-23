@@ -22,9 +22,11 @@ $("a.item").click(function () {
 	} 
 })
 
-$("#inbox").click(function () {
+$("#inbox").click(function (e) {
+
 
 	$('#modal_one').modal('show');
+	$( "#number1" ).hide();
 });
 
 $("#modal_two_link").click(function () {
