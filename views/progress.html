@@ -80,11 +80,15 @@
                         <div class="ui vertical fluid menu">
 
                             <div style="margin-top: 10px;" class="ui buttons">
-
-                                <button class="ui inverted blue button" onclick="drawCurveTypes()">Bench</button>
-                                <button class="ui inverted red button" onclick="drawCurveTypes2()">Deadlift</button>
-                                <button class="ui inverted yellow button" onclick="drawCurveTypes3()">Overhead</button>
-                                <button class="ui inverted green button" onclick="drawCurveTypes4()">Squat</button>
+                                
+                                <button class="ui inverted blue button" onclick="drawGraph(benchData, 'Bench','blue')">Bench</button>
+                                <button class="ui inverted blue button"  id="BenchLogBt"><i class="chart area icon"></i></button>
+                                <button class="ui inverted red button" onclick="drawGraph(deadliftData,'Deadlift', 'red')">Deadlift</button>
+                                <button class="ui inverted red button" id="DeadliftLogBt"><i class="chart area icon"></i></button>
+                                <button class="ui inverted yellow button" onclick="drawGraph(overheadData,'Overhead', 'orange')">Overhead</button>
+                                <button class="ui inverted yellow button" id="OverheadLogBt"><i class="chart area icon"></i></button>
+                                <button class="ui inverted green button" onclick="drawGraph(squatData,'Squat', 'green')">Squat</button>
+                                <button class="ui inverted green button"id="SquatLogBt"><i class="chart area icon"></i></button>
                             </div>
 
                             <div id="chart_div" style="width: 100%; height: 500px;"></div>
@@ -132,6 +136,118 @@
                 </div>
             </div>
         </div>
+
+        <div class="ui modal bench">
+            <div class="header">Bench Input</div>
+            <form class="ui form">
+                <div class="field">
+                    <div class="ui labeled input">
+                        <div class="ui label">
+                        Weight
+                        </div>
+                        <input type="text" id="BenchInW">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui labeled input">
+                        <div class="ui label">
+                          Reps
+                        </div>
+                        <input type="text" id="BenchInR">
+                      </div>
+                </div>
+                
+            </form>
+              <div class="actions">
+                <div class="ui positive left button" style="display: block;" id="BenchLogAddBt">
+                    Add
+                </div>
+            </div>
+          </div>
+
+          <div class="ui modal deadlift">
+            <div class="header">Deadlift Input</div>
+            <form class="ui form">
+                <div class="field">
+                    <div class="ui labeled input">
+                        <div class="ui label">
+                        Weight
+                        </div>
+                        <input type="text" id="DeadliftInW">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui labeled input">
+                        <div class="ui label">
+                          Reps
+                        </div>
+                        <input type="text" id="DeadliftInR">
+                      </div>
+                </div>
+                
+            </form>
+              <div class="actions">
+                <div class="ui positive left button" style="display: block;" id="DeadliftLogAddBt">
+                    Add
+                </div>
+            </div>
+          </div>
+
+          <div class="ui modal overhead">
+            <div class="header">Overhead Input</div>
+            <form class="ui form">
+                <div class="field">
+                    <div class="ui labeled input">
+                        <div class="ui label">
+                        Weight
+                        </div>
+                        <input type="text" id="OverheadInW">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui labeled input">
+                        <div class="ui label">
+                          Reps
+                        </div>
+                        <input type="text" id="OverheadInR">
+                      </div>
+                </div>
+                
+            </form>
+              <div class="actions">
+                <div class="ui positive left button" style="display: block;" id="OverheadLogAddBt">
+                    Add
+                </div>
+            </div>
+          </div>
+
+          <div class="ui modal squat">
+            <div class="header">Squat Input</div>
+            <form class="ui form">
+                <div class="field">
+                    <div class="ui labeled input">
+                        <div class="ui label">
+                        Weight
+                        </div>
+                        <input type="text" id="SquatInW">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui labeled input">
+                        <div class="ui label">
+                          Reps
+                        </div>
+                        <input type="text" id="SquatInR">
+                      </div>
+                </div>
+                
+            </form>
+              <div class="actions">
+                <div class="ui positive left button" style="display: block;" id="SquatLogAddBt">
+                    Add
+                </div>
+            </div>
+          </div>
 
     </div>
 
@@ -181,6 +297,191 @@
             }
             
         });
+
+        let benchData = [
+            [new Date('2021-03-15'), 145],
+            [new Date('2021-03-22'), 155],
+            [new Date('2021-03-29'), 165],
+            [new Date('2021-04-05'), 160],
+            [new Date('2021-04-12'), 175],
+            [new Date('2021-04-19'), 180],
+        ]
+
+        let deadliftData = [
+            [new Date('2021-03-16'), 295],
+            [new Date('2021-03-23'), 300],
+            [new Date('2021-03-30'), 300],
+            [new Date('2021-04-06'), 305],
+            [new Date('2021-04-13'), 310],
+            [new Date('2021-04-20'), 315],
+        ]
+
+        let overheadData = [
+            [new Date('2021-03-18'), 115],
+            [new Date('2021-03-25'), 120],
+            [new Date('2021-04-02'), 123],
+            [new Date('2021-04-08'), 125],
+            [new Date('2021-04-15'), 135],
+            [new Date('2021-04-22'), 135],
+        ]
+
+        let squatData = [
+            [new Date('2021-03-19'), 280],
+            [new Date('2021-03-26'), 285],
+            [new Date('2021-04-03'), 290],
+            [new Date('2021-04-09'), 295],
+            [new Date('2021-04-16'), 295],
+            [new Date('2021-04-24'), 300],
+        ]
+
+        function drawGraph(rowData, type, lineColor) {
+            var data = new google.visualization.DataTable();
+
+
+            data.addColumn('date', 'X');
+            data.addColumn('number', type);
+
+
+            data.addRows(rowData);
+
+            var options = {
+                title: type,
+                hAxis: {
+                    title: 'Date',
+                    format: 'M/d/yy',
+                },
+                vAxis: {
+                    title: '1 Rep Max (lbs)'
+                },
+                series: {
+                    1: {
+                        curveType: 'function'
+                    }
+                },
+                colors:[lineColor],
+                pointSize: 20,
+                pointShape: { type: 'square' }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+
+            chart.draw(data, options);
+        }
+
+
+
+        function getDate() {
+            var today = new Date();
+            var dd = String(today.getDate()+1).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+            var yyyy = today.getFullYear();
+
+            today = yyyy + '-' + mm + '-' + dd;
+            return today;
+        }
+
+
+        //Bench Logging -------------------------------------------------------------------
+        let benchW = document.getElementById("BenchInW");
+        let benchR = document.getElementById("BenchInR");
+
+        document.getElementById("BenchLogAddBt").addEventListener("click",function(){
+
+            benchWval = benchW.value
+            benchRval = benchR.value
+
+            if(benchRval!='' && benchWval!=''){
+                newMax = parseInt(benchWval) * (1+(parseInt(benchRval)/30)) ;
+                dayString = getDate();
+                benchData.push([new Date(dayString), newMax]);
+                drawGraph(benchData, "Bench", 'blue');
+            }
+            
+            benchW.value = '';
+            benchR.value = '';
+        });
+        
+        document.getElementById("BenchLogBt").addEventListener("click", function(){
+            $('.ui.modal.bench').modal('show');
+        });
+
+        //Deadlift Logging -------------------------------------------------------------------
+        let deadliftW = document.getElementById("DeadliftInW");
+        let deadliftR = document.getElementById("DeadliftInR");
+
+        document.getElementById("DeadliftLogAddBt").addEventListener("click",function(){
+
+            deadliftWval = deadliftW.value
+            deadliftRval = deadliftR.value
+
+            if(deadliftRval!='' && deadliftWval!=''){
+                newMax = parseInt(deadliftWval) * (1+(parseInt(deadliftRval)/30)) ;
+                dayString = getDate();
+                deadliftData.push([new Date(dayString), newMax]);
+                drawGraph(deadliftData, "Deadlift", 'red');
+                
+            }
+            
+            deadliftW.value = '';
+            deadliftR.value = '';
+        });
+        
+        document.getElementById("DeadliftLogBt").addEventListener("click", function(){
+            $('.ui.modal.deadlift').modal('show');
+        });
+
+        //Overhead Logging -------------------------------------------------------------------
+        let overheadW = document.getElementById("OverheadInW");
+        let overheadR = document.getElementById("OverheadInR");
+
+        document.getElementById("OverheadLogAddBt").addEventListener("click",function(){
+
+            overheadWval = overheadW.value
+            overheadRval = overheadR.value
+
+            if(overheadRval!='' && overheadWval!=''){
+                newMax = parseInt(overheadWval) * (1+(parseInt(overheadRval)/30)) ;
+                dayString = getDate();
+                overheadData.push([new Date(dayString), newMax]);
+                drawGraph(overheadData, "Overhead", 'orange');
+                
+            }
+            
+            overheadW.value = '';
+            overheadR.value = '';
+        });
+        
+        document.getElementById("OverheadLogBt").addEventListener("click", function(){
+            $('.ui.modal.overhead').modal('show');
+        });
+
+        //Squat Logging -------------------------------------------------------------------
+        let squatW = document.getElementById("SquatInW");
+        let squatR = document.getElementById("SquatInR");
+
+        document.getElementById("SquatLogAddBt").addEventListener("click",function(){
+
+            squatWval = squatW.value
+            squatRval = squatR.value
+
+            if(squatRval!='' && squatWval!=''){
+                newMax = parseInt(squatWval) * (1+(parseInt(squatRval)/30)) ;
+                dayString = getDate();
+                squatData.push([new Date(dayString), newMax]);
+                drawGraph(squatData, "Squat", 'green');
+                
+            }
+            
+            squatW.value = '';
+            squatR.value = '';
+        });
+        
+        document.getElementById("SquatLogBt").addEventListener("click", function(){
+            $('.ui.modal.squat').modal('show');
+        });
+
+
 
 
 

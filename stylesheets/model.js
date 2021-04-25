@@ -171,158 +171,161 @@ google.charts.load('current', {
 });
 google.charts.load('current', { 'packages': ['bar'] });
 google.charts.setOnLoadCallback(drawChart);
-google.charts.setOnLoadCallback(drawCurveTypes);
+// google.charts.setOnLoadCallback(drawCurveTypes);
 google.charts.load('current', { 'packages': ['corechart'] });
 google.charts.setOnLoadCallback(drawChart);
 
-function drawCurveTypes() {
-	var data = new google.visualization.DataTable();
+// let cruveTypesrows = [
+// 	[new Date('2021-03-15'), 145],
+// 	[new Date('2021-03-22'), 155],
+// 	[new Date('2021-03-29'), 165],
+// 	[new Date('2021-04-05'), 160],
+// 	[new Date('2021-04-12'), 175],
+// 	[new Date('2021-04-19'), 180],
+
+// ]
+
+// function drawCurveTypes() {
+// 	var data = new google.visualization.DataTable();
 
 
-	data.addColumn('number', 'X');
-	data.addColumn('number', 'Bench');
-
-
-
-
-
-	data.addRows([
-		[0, 0],
-		[1, 5],
-		[2, 15],
-		[3, 9],
-		[4, 10],
-		[5, 5],
-
-	]);
-
-	var options = {
-		hAxis: {
-			title: 'Month'
-		},
-		vAxis: {
-			title: 'Weight (lbs)'
-		},
-		series: {
-			1: {
-				curveType: 'function'
-			}
-		}
-	};
-
-	var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-
-
-	chart.draw(data, options);
-}
-
-function drawCurveTypes2() {
-	var data2 = new google.visualization.DataTable();
-
-	data2.addColumn('number', 'X');
-	data2.addColumn('number', 'Bench');
-	data2.addColumn('number', 'Deadlift');
-
-
-	data2.addRows([
-		[0, 0, 0],
-		[1, 5, 3],
-		[2, 15, 15],
-		[3, 9, 11],
-		[4, 10, 17],
-		[5, 5, 11],
-
-	]);
-	var options = {
-		hAxis: {
-			title: 'Month'
-		},
-		vAxis: {
-			title: 'Weight (lbs)'
-		},
-		series: {
-			1: {
-				curveType: 'function'
-			}
-		}
-	};
-
-	var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-	chart.draw(data2, options);
-}
-
-function drawCurveTypes3() {
-	var data2 = new google.visualization.DataTable();
-
-	data2.addColumn('number', 'X');
-	data2.addColumn('number', 'Bench');
-	data2.addColumn('number', 'Deadlift');
-	data2.addColumn('number', 'Overhead');
+// 	data.addColumn('date', 'X');
+// 	data.addColumn('number', 'Bench');
 
 
 
-	data2.addRows([
-		[0, 0, 0, 0],
-		[1, 5, 3, 14],
-		[2, 15, 15, 9],
-		[3, 9, 11, 15],
-		[4, 10, 17, 8],
-		[5, 5, 11, 19],
-
-	]);
-	var options = {
-		hAxis: {
-			title: 'Month'
-		},
-		vAxis: {
-			title: 'Weight (lbs)'
-		},
-		series: {
-			1: {
-				curveType: 'function'
-			}
-		}
-	};
-
-	var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-	chart.draw(data2, options);
-}
-function drawCurveTypes4() {
-	var data2 = new google.visualization.DataTable();
-
-	data2.addColumn('number', 'X');
-	data2.addColumn('number', 'Bench');
-	data2.addColumn('number', 'Deadlift');
-	data2.addColumn('number', 'Overhead');
-	data2.addColumn('number', 'Squats');
 
 
-	data2.addRows([
-		[0, 0, 0, 0, 0],
-		[1, 5, 3, 14, 19],
-		[2, 15, 15, 9, 6],
-		[3, 9, 11, 15, 15],
-		[4, 10, 17, 8, 11],
-		[5, 5, 11, 19, 4],
+// 	data.addRows(cruveTypesrows);
 
-	]);
-	var options = {
-		hAxis: {
-			title: 'Month'
-		},
-		vAxis: {
-			title: 'Weight (lbs)'
-		},
-		series: {
-			1: {
-				curveType: 'function'
-			}
-		}
-	};
+// 	var options = {
+// 		hAxis: {
+// 			title: 'Date',
+//             format: 'M/d/yy',
+// 		},
+// 		vAxis: {
+// 			title: '1 Rep Max'
+// 		},
+// 		series: {
+// 			1: {
+// 				curveType: 'function'
+// 			}
+// 		}
+// 	};
 
-	var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-	chart.draw(data2, options);
-}
+// 	var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+
+// 	chart.draw(data, options);
+// }
+
+// function drawCurveTypes2() {
+// 	var data2 = new google.visualization.DataTable();
+
+// 	data2.addColumn('number', 'X');
+// 	data2.addColumn('number', 'Bench');
+// 	data2.addColumn('number', 'Deadlift');
+
+
+// 	data2.addRows([
+// 		[0, 0, 0],
+// 		[1, 5, 3],
+// 		[2, 15, 15],
+// 		[3, 9, 11],
+// 		[4, 10, 17],
+// 		[5, 5, 11],
+
+// 	]);
+// 	var options = {
+// 		hAxis: {
+// 			title: 'Month'
+// 		},
+// 		vAxis: {
+// 			title: 'Weight (lbs)'
+// 		},
+// 		series: {
+// 			1: {
+// 				curveType: 'function'
+// 			}
+// 		}
+// 	};
+
+// 	var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+// 	chart.draw(data2, options);
+// }
+
+// function drawCurveTypes3() {
+// 	var data2 = new google.visualization.DataTable();
+
+// 	data2.addColumn('number', 'X');
+// 	data2.addColumn('number', 'Bench');
+// 	data2.addColumn('number', 'Deadlift');
+// 	data2.addColumn('number', 'Overhead');
+
+
+
+// 	data2.addRows([
+// 		[0, 0, 0, 0],
+// 		[1, 5, 3, 14],
+// 		[2, 15, 15, 9],
+// 		[3, 9, 11, 15],
+// 		[4, 10, 17, 8],
+// 		[5, 5, 11, 19],
+
+// 	]);
+// 	var options = {
+// 		hAxis: {
+// 			title: 'Month'
+// 		},
+// 		vAxis: {
+// 			title: 'Weight (lbs)'
+// 		},
+// 		series: {
+// 			1: {
+// 				curveType: 'function'
+// 			}
+// 		}
+// 	};
+
+// 	var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+// 	chart.draw(data2, options);
+// }
+// function drawCurveTypes4() {
+// 	var data2 = new google.visualization.DataTable();
+
+// 	data2.addColumn('number', 'X');
+// 	data2.addColumn('number', 'Bench');
+// 	data2.addColumn('number', 'Deadlift');
+// 	data2.addColumn('number', 'Overhead');
+// 	data2.addColumn('number', 'Squats');
+
+
+// 	data2.addRows([
+// 		[0, 0, 0, 0, 0],
+// 		[1, 5, 3, 14, 19],
+// 		[2, 15, 15, 9, 6],
+// 		[3, 9, 11, 15, 15],
+// 		[4, 10, 17, 8, 11],
+// 		[5, 5, 11, 19, 4],
+
+// 	]);
+// 	var options = {
+// 		hAxis: {
+// 			title: 'Month'
+// 		},
+// 		vAxis: {
+// 			title: 'Weight (lbs)'
+// 		},
+// 		series: {
+// 			1: {
+// 				curveType: 'function'
+// 			}
+// 		}
+// 	};
+
+// 	var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+// 	chart.draw(data2, options);
+// }
 
 function drawChart() {
 	var data = google.visualization.arrayToDataTable([
