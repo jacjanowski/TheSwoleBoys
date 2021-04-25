@@ -65,18 +65,17 @@
     </h1>
     <div class="ui center aligned equal width stackable grid">
 
+        <div class="ui three buttons" style="width: 75%;height: 4rem;">
+            <button class="ui active button" id="StrBt">Strength</button>
+            <button class="ui button" id="WghtBt">Weight</button>
+            <button class="ui button" id="EndBt">Endurance</button>
+        </div>
+
         <div class="twelve wide column">
             <div class="ui segment">
 
-                <div class="ui tabular menu">
-                    <div class="item" data-tab="tab-name">Strength</div>
-                    <div class="item" data-tab="tab-name2">Weight</div>
-                    <div class="item" data-tab="tab-name3">Endurance</div>
-                </div>
 
-
-
-                <div class="ui tab" data-tab="tab-name">
+                <div class="" id="StrSec">
                     <div class="column">
                         <div class="ui vertical fluid menu">
 
@@ -93,7 +92,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="ui tab" data-tab="tab-name2">
+
+                <div class="" id="WghtSec" style="display: none;">
                     <div class="column">
                         <div class="ui vertical fluid menu">
 
@@ -110,7 +110,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="ui tab" data-tab="tab-name3">
+
+
+                <div class="" id="EndSec" style="display: none;">
                     <div class="column">
                         <div class="ui vertical fluid menu">
 
@@ -134,6 +136,55 @@
     </div>
 
     <script type="text/javascript" src="../stylesheets/model.js"></script>
+    <script>
+        let strSec = document.getElementById("StrSec");
+        let wghtSec = document.getElementById("WghtSec");
+        let endSec = document.getElementById("EndSec");
+        let activeSec = strSec;
+        let activeBt = "StrBt";
+
+        document.getElementById("StrBt").addEventListener("click",function(){
+            if(activeBt != this.id){
+                strSec.style.display = "block";
+                activeSec.style.display = "none";
+
+                this.classList.add("active");
+                document.getElementById(activeBt).classList.remove("active");
+                activeSec = strSec;
+                activeBt = this.id;
+            }
+            
+        });
+
+        document.getElementById("WghtBt").addEventListener("click",function(){
+            if(activeBt != this.id){
+                wghtSec.style.display = "block";
+                activeSec.style.display = "none";
+
+                this.classList.add("active");
+                document.getElementById(activeBt).classList.remove("active");
+                activeSec = wghtSec;
+                activeBt = this.id;
+            }
+            
+        });
+
+        document.getElementById("EndBt").addEventListener("click",function(){
+            if(activeBt != this.id){
+                endSec.style.display = "block";
+                activeSec.style.display = "none";
+
+                this.classList.add("active");
+                document.getElementById(activeBt).classList.remove("active");
+                activeSec = endSec;
+                activeBt = this.id;
+            }
+            
+        });
+
+
+
+    </script>
 </body>
 
 
