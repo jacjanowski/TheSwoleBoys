@@ -1,9 +1,11 @@
-// $('#toggle').click(function(){
-// 	$(this).toggleClass('active');
-// 	if (this.classList.contains("active")){
 
-// 	}
-//  });
+$("#navbar").ready(function () {
+	$('a').click(function () {
+		$('.item.active').removeClass("active");
+		$(this).addClass("active");
+		$(this).style.color = "green";
+	});
+});
 
 $(".toggle").click(function () {
 	if (this.classList.contains("active")) {
@@ -15,18 +17,20 @@ $(".toggle").click(function () {
 	}
 })
 
+$("div.four.column.wide a.item").click(function () {
 
-$("a.item").click(function () {
+
 	if (!this.classList.contains("active")) {
 		document.getElementById('placeholder').style.display = "none";
-	} 
+	}
+
 })
 
 $("#inbox").click(function (e) {
 
 
 	$('#modal_one').modal('show');
-	$( "#number1" ).hide();
+	$("#number1").hide();
 });
 
 $("#modal_two_link").click(function () {
@@ -50,16 +54,6 @@ $("#modal_five_link").click(function () {
 
 
 
-// document.getElementById("toggle").addEventListener("click", function () {
-
-// 	if (this.classList.contains("active")) {
-// 		this.classList.remove("active");
-// 		this.innerHTML = '<i class="add icon"></i>' + "Add Friend";
-// 	} else {
-// 		this.classList.add("active");
-// 		this.innerText = "Added!";
-// 	}
-// });
 
 
 $('ul').on('click', 'li', function () {
