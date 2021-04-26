@@ -269,6 +269,18 @@ span {
 .ui.vertical.tabular.menu .item.active {
 	background-color: rgb(198, 124, 184);
 }
+#navbar{
+	border-bottom: none;
+}
+#navbar a{
+	padding: 15px 40px;
+	font-size: 20px;
+}
+#navbar a:hover {
+	border-bottom: 2px solid black;
+	transition: 1s;
+	
+}
 
 /* When the hamburger is displayed */
 @media (max-width: 768px){
