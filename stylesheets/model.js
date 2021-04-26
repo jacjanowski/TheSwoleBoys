@@ -170,10 +170,10 @@ google.charts.load('current', {
 	packages: ['corechart', 'line']
 });
 google.charts.load('current', { 'packages': ['bar'] });
-google.charts.setOnLoadCallback(drawChart);
+// google.charts.setOnLoadCallback(drawChart);
 // google.charts.setOnLoadCallback(drawCurveTypes);
 google.charts.load('current', { 'packages': ['corechart'] });
-google.charts.setOnLoadCallback(drawChart);
+// google.charts.setOnLoadCallback(drawChart);
 
 // let cruveTypesrows = [
 // 	[new Date('2021-03-15'), 145],
@@ -339,6 +339,7 @@ function drawChart() {
 
 
 	var options = {
+		title: '1-Week Progression',
 		vAxis: {
 			title: 'Weight (lbs)',
 			titleTextStyle: {
@@ -377,6 +378,7 @@ function drawChart2() {
 
 
 	var options = {
+		title: '5-Week Progression',
 		vAxis: {
 			title: 'Weight (lbs)',
 			titleTextStyle: {
@@ -415,6 +417,7 @@ function drawChart3() {
 
 
 	var options = {
+		title: '5-Month Progression',
 		vAxis: {
 			title: 'Weight (lbs)',
 			titleTextStyle: {
@@ -453,7 +456,7 @@ function drawChart4() {
 
 	var options = {
 		chart: {
-			title: 'Your Endurance Performance',
+			title: 'Your Endurance Performance in The Last Week',
 			subtitle: 'Associates Workouts with Time and Weight Loss',
 		},
 		bars: 'horizontal' // Required for Material Bar Charts.
@@ -475,7 +478,7 @@ function drawChart5() {
 
 	var options = {
 		chart: {
-			title: 'Your Endurance Performance',
+			title: 'Your Endurance Performance in the Last 5 Weeks',
 			subtitle: 'Associates Workouts with Time and Weight Loss',
 		},
 		bars: 'horizontal' // Required for Material Bar Charts.
@@ -497,7 +500,7 @@ function drawChart6() {
 
 	var options = {
 		chart: {
-			title: 'Your Endurance Performance',
+			title: 'Your Endurance Performance in The Last 5 Months',
 			subtitle: 'Associates Workouts with Time and Weight Loss',
 		},
 		bars: 'horizontal' // Required for Material Bar Charts.

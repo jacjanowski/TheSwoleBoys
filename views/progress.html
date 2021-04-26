@@ -81,13 +81,13 @@
 
                             <div style="margin-top: 10px;" class="ui buttons">
                                 
-                                <button class="ui inverted blue button" onclick="drawGraph(benchData, 'Bench','blue')">Bench</button>
+                                <button class="ui inverted blue button" onclick="drawGraph(benchData, 'Bench','blue')" id="BenchBt">Bench</button>
                                 <button class="ui inverted blue button"  id="BenchLogBt"><i class="chart area icon"></i></button>
-                                <button class="ui inverted red button" onclick="drawGraph(deadliftData,'Deadlift', 'red')">Deadlift</button>
+                                <button class="ui inverted red button lift" onclick="drawGraph(deadliftData,'Deadlift', 'red')" >Deadlift</button>
                                 <button class="ui inverted red button" id="DeadliftLogBt"><i class="chart area icon"></i></button>
-                                <button class="ui inverted yellow button" onclick="drawGraph(overheadData,'Overhead', 'orange')">Overhead</button>
+                                <button class="ui inverted yellow button lift" onclick="drawGraph(overheadData,'Overhead', 'orange')" >Overhead</button>
                                 <button class="ui inverted yellow button" id="OverheadLogBt"><i class="chart area icon"></i></button>
-                                <button class="ui inverted green button" onclick="drawGraph(squatData,'Squat', 'green')">Squat</button>
+                                <button class="ui inverted green button lift" onclick="drawGraph(squatData,'Squat', 'green')" >Squat</button>
                                 <button class="ui inverted green button"id="SquatLogBt"><i class="chart area icon"></i></button>
                             </div>
 
@@ -103,7 +103,7 @@
 
                             <div style="margin-top: 10px;" class="ui buttons">
 
-                                <button class="ui inverted purple button" onclick="drawChart()">1-Week</button>
+                                <button class="ui inverted purple button" onclick="drawChart()" id="WghtWeek">1-Week</button>
                                 <button class="ui inverted purple button" onclick="drawChart2()">5-Week</button>
                                 <button class="ui inverted purple button" onclick="drawChart3()">5-Month</button>
                             </div>
@@ -122,9 +122,9 @@
 
                             <div style="margin-top: 10px;" class="ui buttons">
 
-                                <button class="ui inverted purple button" onclick="drawChart4()">1-Week</button>
-                                <button class="ui inverted purple button" onclick="drawChart5()">5-Week</button>
-                                <button class="ui inverted purple button" onclick="drawChart6()">5-Month</button>
+                                <button class="ui inverted purple button" onclick="drawChart4()" id="EndWeek">1-Week</button>
+                                <button class="ui inverted purple button ends" onclick="drawChart5()">5-Week</button>
+                                <button class="ui inverted purple button ends" onclick="drawChart6()">5-Month</button>
 
                             </div>
 
@@ -258,6 +258,8 @@
         let endSec = document.getElementById("EndSec");
         let activeSec = strSec;
         let activeBt = "StrBt";
+        let endWeek = document.getElementById("EndWeek");
+        let wghtWeek = document.getElementById("WghtWeek");
 
         document.getElementById("StrBt").addEventListener("click",function(){
             if(activeBt != this.id){
@@ -268,6 +270,7 @@
                 document.getElementById(activeBt).classList.remove("active");
                 activeSec = strSec;
                 activeBt = this.id;
+
             }
             
         });
@@ -281,6 +284,8 @@
                 document.getElementById(activeBt).classList.remove("active");
                 activeSec = wghtSec;
                 activeBt = this.id;
+
+                wghtWeek.click()
             }
             
         });
@@ -294,8 +299,9 @@
                 document.getElementById(activeBt).classList.remove("active");
                 activeSec = endSec;
                 activeBt = this.id;
+
+                endWeek.click();
             }
-            
         });
 
         let benchData = [
@@ -480,7 +486,25 @@
         document.getElementById("SquatLogBt").addEventListener("click", function(){
             $('.ui.modal.squat').modal('show');
         });
+        //end-------------------------------------------------------------
 
+        let benchBt = document.getElementById("BenchBt")
+
+        window.addEventListener('load', (event) => {
+            benchBt.click()
+            benchBt.classList.add('active');
+        });
+
+        document.querySelectorAll('.lift').forEach(function(){
+            this.addEventListener('click',function(){
+                benchBt.classList.remove('active');
+            })
+        })
+
+
+
+
+        
 
 
 
