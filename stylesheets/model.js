@@ -51,6 +51,31 @@ $("#modal_five_link").click(function () {
 	$('#modal_five').modal('show');
 });
 
+$("#modal_six_link").click(function () {
+
+	$('#modal_six').modal('show');
+});
+$("#modal_seven_link").click(function () {
+
+	$('#modal_seven').modal('show');
+});
+$("#modal_eight_link").click(function () {
+
+	$('#modal_eight').modal('show');
+});
+$("#modal_nine_link").click(function () {
+
+	$('#modal_nine').modal('show');
+});
+$("#modal_ten_link").click(function () {
+
+	$('#modal_ten').modal('show');
+});
+$("#modal_eleven_link").click(function () {
+
+	$('#modal_eleven').modal('show');
+});
+
 
 
 
